@@ -1,16 +1,35 @@
-# do run.do
+# //  Questa Sim-64
+# //  Version 2025.1_2 win64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# set TESTNAME StressTest
+# StressTest
+#  set VERBOSITY UVM_LOWH
+# UVM_LOWH
+#  do run.do
 # INFO: Starting simulation script...
 # PWD = C:/Users/meita/OneDrive/Desktop/Chip_Design_Verification/Verification/CPM_Verification_Environment
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is meita@MEITARLOQ.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is meita@MEITARLOQ.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is meita@MEITARLOQ.
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vmap 2025.1_2 Lib Mapping Utility 2025.04 Apr  7 2025
 # vmap work work 
 # Modifying modelsim.ini
 # QuestaSim-64 vlog 2025.1_2 Compiler 2025.04 Apr  7 2025
-# Start time: 13:42:06 on Jul 03,2026
-# vlog -sv verification/cpm_verification_param_pkg.sv design/cpm_rtl_update.sv verification/Interfaces/input_streaming_if.sv verification/Interfaces/output_streaming_if.sv verification/Interfaces/reg_ctrl_if.sv verification/Transactions/MyTransactionsPkg.sv verification/RAL/design_pkg_uvm.sv verification/Cpm_In_Agent/CpmInAgentPkg.sv verification/Cpm_Out_Agent/CpmOutAgentPkg.sv verification/Cpm_Reg_Agent/CpmRegAgentPkg.sv verification/Environment/CpmEnvPkg.sv verification/Sequences/CpmSequencePkg.sv verification/Tests/CpmTestPkg.sv verification/Tests/StressTest/StressTestPkg.sv verification/Tests/SmokeTest/SmokeTestPkg.sv verification/Tests/DropTest/DropTestPkg.sv verification/tb_top.sv 
+# Start time: 13:50:33 on Jul 03,2026
+# vlog -reportprogress 300 -sv verification/cpm_verification_param_pkg.sv design/cpm_rtl_update.sv verification/Interfaces/input_streaming_if.sv verification/Interfaces/output_streaming_if.sv verification/Interfaces/reg_ctrl_if.sv verification/Transactions/MyTransactionsPkg.sv verification/RAL/design_pkg_uvm.sv verification/Cpm_In_Agent/CpmInAgentPkg.sv verification/Cpm_Out_Agent/CpmOutAgentPkg.sv verification/Cpm_Reg_Agent/CpmRegAgentPkg.sv verification/Environment/CpmEnvPkg.sv verification/Sequences/CpmSequencePkg.sv verification/Tests/CpmTestPkg.sv verification/Tests/StressTest/StressTestPkg.sv verification/Tests/SmokeTest/SmokeTestPkg.sv verification/Tests/DropTest/DropTestPkg.sv verification/tb_top.sv 
 # -- Compiling package cpm_verification_param_pkg
 # -- Compiling module cpm
 # -- Compiling interface input_streaming_if
@@ -47,28 +66,14 @@
 # 
 # Top level modules:
 # 	tb_top
-# End time: 13:42:09 on Jul 03,2026, Elapsed time: 0:00:03
+# End time: 13:50:34 on Jul 03,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # INFO: Compilation Completed!
 # vsim -coverage -voptargs="+acc" work.tb_top "+UVM_TESTNAME=SmokeTest" "+UVM_VERBOSITY=UVM_LOW" 
-# Start time: 13:42:09 on Jul 03,2026
+# Start time: 13:50:34 on Jul 03,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# //  Questa Sim-64
-# //  Version 2025.1_2 win64 Apr  7 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
 # Loading sv_std.std
 # Loading work.input_streaming_if(fast)
 # Loading work.output_streaming_if(fast)
@@ -100,20 +105,11 @@
 # Loading C:/questasim64_2025.1_2/uvm-1.1d\win64\uvm_dpi.dll
 # ** Warning: (vsim-8634) Code was not compiled with coverage options.
 # CONFIG/wave.do
-# wave activecursor not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: meita  Hostname: MEITARLOQ  ProcessID: 1880
+#           Attempting to use alternate WLF file "./wlft4h70t4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4h70t4
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -250,4 +246,3 @@
 # ** Note: $finish    : C:/questasim64_2025.1_2/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 2595 ns  Iteration: 53  Instance: /tb_top
 # Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2025.1_2/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# Stopped at C:/questasim64_2025.1_2/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
