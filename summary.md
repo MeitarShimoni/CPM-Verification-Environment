@@ -18,3 +18,9 @@
   * **Input Thread:** Injects a continuous burst of 20 stimulus packets via the input sequencer.
   * **Output Thread:** Introduces an artificial `200ns` stall before initiating the output sequence for 20 packets. This deliberate delay tests the DUT's backpressure handling and validates FIFO/buffer thresholds.
 * **Invariant Validation:** Concludes by invoking `check_invariants()` to evaluate DUT hardware counters and ensure structural stability post-traffic execution.
+
+
+
+BUGs and Challenges:
+
+

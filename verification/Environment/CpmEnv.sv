@@ -96,7 +96,11 @@ endfunction
         m_out_agent.m_mon.ap.connect(m_sb.m_actual_export);
 
         // OUTPUT -> coverage (so packets are sampled for coverage)
-        m_in_agent.m_mon.ap.connect(m_cov_collector.analysis_export);
+        m_in_agent.m_mon.ap.connect(m_cov_collector.analysis_export_in);
+
+        m_out_agent.m_mon.ap.connect(m_cov_collector.analysis_export_out);
+
+
 
         // ---------------- RAL connect ----------------
         // 1) RAL frontdoor goes through reg agent sequencer

@@ -11,7 +11,7 @@ class CpmOutTransaction extends uvm_sequence_item;
         //   out_ready<=1; repeat(0); out_ready<=0;
         // in the same timestep (NBA), and out_ready never goes high.
         // That can deadlock the DUT (no out_fire) -> buffer_full -> in_ready stuck low.
-        constraint delay_c    { delay    inside {[0:1]}; }
+        constraint delay_c    { delay    inside {[0:3]}; }
         // Keep duration at 1 so each out-seq item maps to (at most) one output accept.
         // This avoids the driver consuming multiple outputs per item and then timing out
         // on remaining items (OUT_VALID_TO).

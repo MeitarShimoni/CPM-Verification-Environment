@@ -19,8 +19,8 @@ add wave -noupdate -expand -group {Input Reg Ctrl } -color Magenta -label addr /
 add wave -noupdate -expand -group {Input Reg Ctrl } -color Magenta -label wdata /tb_top/dut/wdata
 add wave -noupdate -expand -group {Input Reg Ctrl } -label rdata /tb_top/dut/rdata
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {127 ns} 0} {{Cursor 2} {2189 ns} 0}
-quietly wave cursor active 2
+WaveRestoreCursors {{Cursor 1} {761 ns} 0} {{Cursor 2} {2751 ns} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 234
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -35,4 +35,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {2185 ns} {2363 ns}
+WaveRestoreZoom {0 ns} {2987 ns}

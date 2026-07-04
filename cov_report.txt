@@ -1,0 +1,545 @@
+QuestaSim-64 vcover 2025.1_2 Coverage Utility 2025.04 Apr  7 2025
+Start time: 18:16:58 on Jul 03,2026
+vcover report -details cov_merged.ucdb 
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_top/m_in_vif
+=== Design Unit: work.input_streaming_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/tb_top/m_in_vif/assert_input_stable
+                     verification/Interfaces/input_streaming_if.sv(38)
+                                                        0          1
+
+=================================================================================
+=== Instance: /tb_top/m_out_vif
+=== Design Unit: work.output_streaming_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/tb_top/m_out_vif/assert_output_stable
+                     verification/Interfaces/output_streaming_if.sv(38)
+                                                        0          2
+
+=================================================================================
+=== Instance: /tb_top/m_reg_vif
+=== Design Unit: work.reg_ctrl_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/tb_top/m_reg_vif/assert_reg_gnt
+                     verification/Interfaces/reg_ctrl_if.sv(39)
+                                                        0          2
+
+=================================================================================
+=== Instance: /CpmEnvPkg
+=== Design Unit: work.CpmEnvPkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    82.18%
+        Coverpoints/Crosses          5        na        na        na
+            Covergroup Bins         88        62        26    70.45%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /CpmEnvPkg/CoverageCollector/StreamCoverage      82.18%        100          -    Uncovered            
+    covered/total bins:                                    62         88          -                      
+    missing/total bins:                                    26         88          -                      
+    % Hit:                                             70.45%        100          -                      
+    Coverpoint cp_mode                                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin modes[0]                                       20          1          -    Covered              
+        bin modes[1]                                       60          1          -    Covered              
+        bin modes[2]                                       20          1          -    Covered              
+        bin modes[3]                                       20          1          -    Covered              
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                16         16          -                      
+        missing/total bins:                                 0         16          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_opcodes[0]                                 10          1          -    Covered              
+        bin all_opcodes[1]                                 10          1          -    Covered              
+        bin all_opcodes[2]                                  6          1          -    Covered              
+        bin all_opcodes[3]                                  8          1          -    Covered              
+        bin all_opcodes[4]                                  6          1          -    Covered              
+        bin all_opcodes[5]                                  6          1          -    Covered              
+        bin all_opcodes[6]                                  2          1          -    Covered              
+        bin all_opcodes[7]                                 10          1          -    Covered              
+        bin all_opcodes[8]                                  6          1          -    Covered              
+        bin all_opcodes[9]                                 12          1          -    Covered              
+        bin all_opcodes[10]                                 6          1          -    Covered              
+        bin all_opcodes[11]                                 6          1          -    Covered              
+        bin all_opcodes[12]                                 8          1          -    Covered              
+        bin all_opcodes[13]                                 6          1          -    Covered              
+        bin all_opcodes[14]                                 6          1          -    Covered              
+        bin all_opcodes[15]                                12          1          -    Covered              
+    Coverpoint cp_drop                                 50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin dropped                                         0          1          -    ZERO                 
+        bin not_dropped                                   120          1          -    Covered              
+    Coverpoint cp_stall                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin stalled                                        28          1          -    Covered              
+        bin not_stalled                                    92          1          -    Covered              
+    Cross cross_mode_opcode                            60.93%        100          -    Uncovered            
+        covered/total bins:                                39         64          -                      
+        missing/total bins:                                25         64          -                      
+        % Hit:                                         60.93%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <modes[1],all_opcodes[14]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[10]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[6]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[4]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[3]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[2]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[2],all_opcodes[15]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[15]>                  6          1          -    Covered              
+            bin <modes[0],all_opcodes[15]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[14]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[0],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[3],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[12]>                  4          1          -    Covered              
+            bin <modes[0],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[2],all_opcodes[11]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[11]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[10]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[9]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[9]>                   6          1          -    Covered              
+            bin <modes[0],all_opcodes[9]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[8]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[8]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[7]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[7]>                   8          1          -    Covered              
+            bin <modes[3],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[4]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[2]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[0],all_opcodes[1]>                   2          1          -    Covered              
+            bin <modes[3],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[0]>                   6          1          -    Covered              
+            bin <modes[3],all_opcodes[15]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[13]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[12]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[9]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[5]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[3]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[1]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[0]>                   0          1          1    ZERO                 
+ Covergroup instance \/CpmEnvPkg::CoverageCollector::StreamCoverage  
+                                                       82.18%        100          -    Uncovered            
+    covered/total bins:                                    62         88          -                      
+    missing/total bins:                                    26         88          -                      
+    % Hit:                                             70.45%        100          -                      
+    Coverpoint cp_mode                                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin modes[0]                                       20          1          -    Covered              
+        bin modes[1]                                       60          1          -    Covered              
+        bin modes[2]                                       20          1          -    Covered              
+        bin modes[3]                                       20          1          -    Covered              
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                16         16          -                      
+        missing/total bins:                                 0         16          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_opcodes[0]                                 10          1          -    Covered              
+        bin all_opcodes[1]                                 10          1          -    Covered              
+        bin all_opcodes[2]                                  6          1          -    Covered              
+        bin all_opcodes[3]                                  8          1          -    Covered              
+        bin all_opcodes[4]                                  6          1          -    Covered              
+        bin all_opcodes[5]                                  6          1          -    Covered              
+        bin all_opcodes[6]                                  2          1          -    Covered              
+        bin all_opcodes[7]                                 10          1          -    Covered              
+        bin all_opcodes[8]                                  6          1          -    Covered              
+        bin all_opcodes[9]                                 12          1          -    Covered              
+        bin all_opcodes[10]                                 6          1          -    Covered              
+        bin all_opcodes[11]                                 6          1          -    Covered              
+        bin all_opcodes[12]                                 8          1          -    Covered              
+        bin all_opcodes[13]                                 6          1          -    Covered              
+        bin all_opcodes[14]                                 6          1          -    Covered              
+        bin all_opcodes[15]                                12          1          -    Covered              
+    Coverpoint cp_drop                                 50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin dropped                                         0          1          -    ZERO                 
+        bin not_dropped                                   120          1          -    Covered              
+    Coverpoint cp_stall                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin stalled                                        28          1          -    Covered              
+        bin not_stalled                                    92          1          -    Covered              
+    Cross cross_mode_opcode                            60.93%        100          -    Uncovered            
+        covered/total bins:                                39         64          -                      
+        missing/total bins:                                25         64          -                      
+        % Hit:                                         60.93%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <modes[1],all_opcodes[14]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[10]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[6]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[4]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[3]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[2]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[2],all_opcodes[15]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[15]>                  6          1          -    Covered              
+            bin <modes[0],all_opcodes[15]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[14]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[0],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[3],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[12]>                  4          1          -    Covered              
+            bin <modes[0],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[2],all_opcodes[11]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[11]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[10]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[9]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[9]>                   6          1          -    Covered              
+            bin <modes[0],all_opcodes[9]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[8]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[8]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[7]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[7]>                   8          1          -    Covered              
+            bin <modes[3],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[4]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[2]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[0],all_opcodes[1]>                   2          1          -    Covered              
+            bin <modes[3],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[0]>                   6          1          -    Covered              
+            bin <modes[3],all_opcodes[15]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[13]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[12]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[9]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[5]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[3]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[1]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[0]>                   0          1          1    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /CpmEnvPkg/CoverageCollector/StreamCoverage      82.18%        100          -    Uncovered            
+    covered/total bins:                                    62         88          -                      
+    missing/total bins:                                    26         88          -                      
+    % Hit:                                             70.45%        100          -                      
+    Coverpoint cp_mode                                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin modes[0]                                       20          1          -    Covered              
+        bin modes[1]                                       60          1          -    Covered              
+        bin modes[2]                                       20          1          -    Covered              
+        bin modes[3]                                       20          1          -    Covered              
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                16         16          -                      
+        missing/total bins:                                 0         16          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_opcodes[0]                                 10          1          -    Covered              
+        bin all_opcodes[1]                                 10          1          -    Covered              
+        bin all_opcodes[2]                                  6          1          -    Covered              
+        bin all_opcodes[3]                                  8          1          -    Covered              
+        bin all_opcodes[4]                                  6          1          -    Covered              
+        bin all_opcodes[5]                                  6          1          -    Covered              
+        bin all_opcodes[6]                                  2          1          -    Covered              
+        bin all_opcodes[7]                                 10          1          -    Covered              
+        bin all_opcodes[8]                                  6          1          -    Covered              
+        bin all_opcodes[9]                                 12          1          -    Covered              
+        bin all_opcodes[10]                                 6          1          -    Covered              
+        bin all_opcodes[11]                                 6          1          -    Covered              
+        bin all_opcodes[12]                                 8          1          -    Covered              
+        bin all_opcodes[13]                                 6          1          -    Covered              
+        bin all_opcodes[14]                                 6          1          -    Covered              
+        bin all_opcodes[15]                                12          1          -    Covered              
+    Coverpoint cp_drop                                 50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin dropped                                         0          1          -    ZERO                 
+        bin not_dropped                                   120          1          -    Covered              
+    Coverpoint cp_stall                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin stalled                                        28          1          -    Covered              
+        bin not_stalled                                    92          1          -    Covered              
+    Cross cross_mode_opcode                            60.93%        100          -    Uncovered            
+        covered/total bins:                                39         64          -                      
+        missing/total bins:                                25         64          -                      
+        % Hit:                                         60.93%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <modes[1],all_opcodes[14]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[10]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[6]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[4]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[3]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[2]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[2],all_opcodes[15]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[15]>                  6          1          -    Covered              
+            bin <modes[0],all_opcodes[15]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[14]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[0],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[3],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[12]>                  4          1          -    Covered              
+            bin <modes[0],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[2],all_opcodes[11]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[11]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[10]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[9]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[9]>                   6          1          -    Covered              
+            bin <modes[0],all_opcodes[9]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[8]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[8]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[7]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[7]>                   8          1          -    Covered              
+            bin <modes[3],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[4]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[2]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[0],all_opcodes[1]>                   2          1          -    Covered              
+            bin <modes[3],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[0]>                   6          1          -    Covered              
+            bin <modes[3],all_opcodes[15]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[13]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[12]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[9]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[5]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[3]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[1]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[0]>                   0          1          1    ZERO                 
+ Covergroup instance \/CpmEnvPkg::CoverageCollector::StreamCoverage  
+                                                       82.18%        100          -    Uncovered            
+    covered/total bins:                                    62         88          -                      
+    missing/total bins:                                    26         88          -                      
+    % Hit:                                             70.45%        100          -                      
+    Coverpoint cp_mode                                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin modes[0]                                       20          1          -    Covered              
+        bin modes[1]                                       60          1          -    Covered              
+        bin modes[2]                                       20          1          -    Covered              
+        bin modes[3]                                       20          1          -    Covered              
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                16         16          -                      
+        missing/total bins:                                 0         16          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_opcodes[0]                                 10          1          -    Covered              
+        bin all_opcodes[1]                                 10          1          -    Covered              
+        bin all_opcodes[2]                                  6          1          -    Covered              
+        bin all_opcodes[3]                                  8          1          -    Covered              
+        bin all_opcodes[4]                                  6          1          -    Covered              
+        bin all_opcodes[5]                                  6          1          -    Covered              
+        bin all_opcodes[6]                                  2          1          -    Covered              
+        bin all_opcodes[7]                                 10          1          -    Covered              
+        bin all_opcodes[8]                                  6          1          -    Covered              
+        bin all_opcodes[9]                                 12          1          -    Covered              
+        bin all_opcodes[10]                                 6          1          -    Covered              
+        bin all_opcodes[11]                                 6          1          -    Covered              
+        bin all_opcodes[12]                                 8          1          -    Covered              
+        bin all_opcodes[13]                                 6          1          -    Covered              
+        bin all_opcodes[14]                                 6          1          -    Covered              
+        bin all_opcodes[15]                                12          1          -    Covered              
+    Coverpoint cp_drop                                 50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin dropped                                         0          1          -    ZERO                 
+        bin not_dropped                                   120          1          -    Covered              
+    Coverpoint cp_stall                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin stalled                                        28          1          -    Covered              
+        bin not_stalled                                    92          1          -    Covered              
+    Cross cross_mode_opcode                            60.93%        100          -    Uncovered            
+        covered/total bins:                                39         64          -                      
+        missing/total bins:                                25         64          -                      
+        % Hit:                                         60.93%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <modes[1],all_opcodes[14]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[10]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[6]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[4]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[3]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[2]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[2],all_opcodes[15]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[15]>                  6          1          -    Covered              
+            bin <modes[0],all_opcodes[15]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[14]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[0],all_opcodes[13]>                  2          1          -    Covered              
+            bin <modes[3],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[12]>                  4          1          -    Covered              
+            bin <modes[0],all_opcodes[12]>                  2          1          -    Covered              
+            bin <modes[2],all_opcodes[11]>                  2          1          -    Covered              
+            bin <modes[1],all_opcodes[11]>                  4          1          -    Covered              
+            bin <modes[2],all_opcodes[10]>                  4          1          -    Covered              
+            bin <modes[3],all_opcodes[9]>                   4          1          -    Covered              
+            bin <modes[1],all_opcodes[9]>                   6          1          -    Covered              
+            bin <modes[0],all_opcodes[9]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[8]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[8]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[7]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[7]>                   8          1          -    Covered              
+            bin <modes[3],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[5]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[4]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[0],all_opcodes[3]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[2]>                   4          1          -    Covered              
+            bin <modes[3],all_opcodes[1]>                   4          1          -    Covered              
+            bin <modes[0],all_opcodes[1]>                   2          1          -    Covered              
+            bin <modes[3],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[2],all_opcodes[0]>                   2          1          -    Covered              
+            bin <modes[1],all_opcodes[0]>                   6          1          -    Covered              
+            bin <modes[3],all_opcodes[15]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[14]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[13]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[12]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[11]>                  0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[10]>                  0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[9]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[8]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[7]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[6]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[5]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[4]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[3]>                   0          1          1    ZERO                 
+            bin <modes[3],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[2]>                   0          1          1    ZERO                 
+            bin <modes[2],all_opcodes[1]>                   0          1          1    ZERO                 
+            bin <modes[0],all_opcodes[0]>                   0          1          1    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 82.18%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/tb_top/m_in_vif/assert_input_stable
+                     verification/Interfaces/input_streaming_if.sv(38)
+                                                        0          1
+/tb_top/m_out_vif/assert_output_stable
+                     verification/Interfaces/output_streaming_if.sv(38)
+                                                        0          2
+/tb_top/m_reg_vif/assert_reg_gnt
+                     verification/Interfaces/reg_ctrl_if.sv(39)
+                                                        0          2
+
+Total Coverage By Instance (filtered view): 91.09%
+
+End time: 18:16:58 on Jul 03,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
