@@ -1,0 +1,23 @@
+class SmokeTest extends CpmBaseTest;
+    `uvm_component_utils(SmokeTest)
+
+    function new(string name = "SmokeTest", uvm_component parent);
+        super.new(name, parent);
+    endfunction
+
+    virtual task run_phase(uvm_phase phase);
+
+        CpmSmokeVirtualSequence vseq = CpmSmokeVirtualSequence::type_id::create("vseq");
+        
+        phase.raise_objection(this);
+
+        vseq.m_regmodel = m_env.m_regmodel;
+        vseq.m_in_seqr  = m_env.m_in_agent.m_seqr;
+        vseq.m_out_seqr = m_env.m_out_agent.m_seqr;
+        
+
+        vseq.start(null);
+
+        phase.drop_objection(this);
+    endtask
+endclass
