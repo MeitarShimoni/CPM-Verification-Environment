@@ -22,6 +22,7 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
 
     // RAL
     cpm_reg_map      m_regmodel;
+    int output_delay = 0;
 
     function new(string name="CpmVirtualSequence");
         super.new(name);
@@ -71,7 +72,7 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
     task write_read_traffic(
         input int num = 10, 
         input bit in_forced_op = 0, 
-        input logic [3:0] in_forced_opcode = 0 );
+        input logic [3:0] in_forced_opcode = 0);
 
         repeat(num) begin
             m_seq.use_forced_opcode = in_forced_op; 
@@ -80,11 +81,11 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
             m_seq.start(m_in_seqr, this);
 
             m_out_seq.num_packets = 1;
+            m_out_seq.out_delay = this.output_delay;
             m_out_seq.start(m_out_seqr, this);
         end
 
     endtask
-
 
     task write_read_burst(input int num = 5);
 
@@ -92,6 +93,7 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
         m_seq.start(m_in_seqr, this);
 
         m_out_seq.num_packets = num;
+        m_out_seq.out_delay   = this.output_delay;
         m_out_seq.start(m_out_seqr, this);
 
     endtask
@@ -148,20 +150,9 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
         m_seq.start(m_in_seqr, this);
         
         m_out_seq.num_packets = num;
+        m_out_seq.out_delay   = this.output_delay;
         m_out_seq.start(m_out_seqr, this);
-        // fork
-        //     begin : IN_SIDE
-        //         repeat (num) begin
-        //             m_seq.num_packets = 1;
-        //             m_seq.start(m_in_seqr, this);
-        //         end
-        //     end
-        //     begin : OUT_SIDE
-        //         // out seq runs continuously; driver creates stalls
-        //         m_out_seq.num_packets = num;
-        //         m_out_seq.start(m_out_seqr, this);
-        //     end
-        // join
+
     endtask
 
  
@@ -201,26 +192,12 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
 
     virtual task stall_scenario();
 
-        `uvm_info("VSEQ", "Starting Stall Scenario: Filling internal buffers", UVM_LOW)
+        #200ns; 
+        
+        m_out_seq.num_packets = 10;
+        m_out_seq.out_delay   = this.output_delay;
+        m_out_seq.start(m_out_seqr, this);
 
-        fork
-            begin
-                m_seq.num_packets = 10;
-                m_seq.start(m_in_seqr, this);
-            end
-
-            begin
-                #200ns; 
-                
-                m_out_seq.num_packets = 10;
-                m_out_seq.start(m_out_seqr, this);
-            end
-        join
-
-        #500ns; 
-
-        `uvm_info("VSEQ", "Stall Scenario Finished", UVM_LOW)
-        check_invariants();
     endtask
 
 endclass

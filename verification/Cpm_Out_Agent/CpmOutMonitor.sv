@@ -85,6 +85,7 @@ class CpmOutMonitor extends uvm_monitor;
             // 1. זיהוי מצב של Backpressure (עיכוב)
             if (m_vif.mon_cb.out_valid && !m_vif.mon_cb.out_ready) begin
                 stall_happened = 1;
+                `uvm_info("MONITOR", "STALLED HAPPEND!", UVM_LOW)
             end
         
             // 2. זיהוי לחיצת יד מוצלחת (Handshake)

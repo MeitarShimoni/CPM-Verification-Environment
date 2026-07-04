@@ -17,20 +17,15 @@ virtual task body();
     enable_cpm(); // Enable and Read CPM
     #20;
     
-
-
     // drop_test(20);
     // =================== PASS TEST ======================
     pass_test(10);
     
-    // write_read_traffic_stress(10);
-    
+    // write_read_traffic_stress(10);    
     #20;
     
     rot_test(10);
     #20;
-
-
 
     // // =================== XOR TEST ======================
     xor_test(16'h1234, 10);

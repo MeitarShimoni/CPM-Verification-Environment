@@ -35,6 +35,8 @@ class CpmStressVirtualSequence extends CpmVirtualSequence;
         // 4. Parallel Traffic
         `uvm_info("VSEQ", "Starting Parallel Traffic Flow", UVM_LOW)
         
+        this.output_delay = 2;
+
         fork
             begin
                 m_seq.num_packets = 20;
@@ -43,6 +45,7 @@ class CpmStressVirtualSequence extends CpmVirtualSequence;
             begin
                 #200ns; // "Stall" 
                 m_out_seq.num_packets = 20;
+                m_out_seq.out_delay   = this.output_delay;
                 m_out_seq.start(m_out_seqr, this);
             end
         join
