@@ -1,0 +1,494 @@
+# do run.do
+# INFO: Starting simulation script...
+# PWD = C:/Users/meita/OneDrive/Desktop/Chip_Design_Verification/Verification/CPM_Verification_Environment
+# QuestaSim-64 vmap 2025.1_2 Lib Mapping Utility 2025.04 Apr  7 2025
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:20:23 on Jul 05,2026
+# vlog -sv verification/cpm_verification_param_pkg.sv design/cpm_rtl_update.sv verification/Interfaces/input_streaming_if.sv verification/Interfaces/output_streaming_if.sv verification/Interfaces/reg_ctrl_if.sv verification/Transactions/MyTransactionsPkg.sv verification/RAL/design_pkg_uvm.sv verification/Cpm_In_Agent/CpmInAgentPkg.sv verification/Cpm_Out_Agent/CpmOutAgentPkg.sv verification/Cpm_Reg_Agent/CpmRegAgentPkg.sv verification/Environment/CpmEnvPkg.sv verification/Sequences/CpmSequencePkg.sv verification/Tests/CpmTestPkg.sv verification/Tests/StressTest/StressTestPkg.sv verification/Tests/SmokeTest/SmokeTestPkg.sv verification/Tests/DropTest/DropTestPkg.sv verification/tb_top.sv 
+# -- Compiling package cpm_verification_param_pkg
+# -- Compiling module cpm
+# -- Compiling interface input_streaming_if
+# -- Importing package cpm_verification_param_pkg
+# -- Compiling package output_streaming_if_sv_unit
+# -- Compiling interface output_streaming_if
+# -- Compiling package reg_ctrl_if_sv_unit
+# -- Compiling interface reg_ctrl_if
+# -- Compiling package MyTransactionsPkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) verification/Transactions/MyTransactionsPkg.sv(3): Using implicit +incdir+C:/questasim64_2025.1_2/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package design_pkg_uvm
+# -- Compiling package CpmInAgentPkg
+# -- Importing package MyTransactionsPkg
+# -- Compiling package CpmOutAgentPkg
+# -- Compiling package CpmRegAgentPkg
+# -- Compiling package CpmEnvPkg
+# -- Importing package CpmInAgentPkg
+# -- Importing package CpmOutAgentPkg
+# -- Importing package CpmRegAgentPkg
+# -- Importing package design_pkg_uvm
+# -- Compiling package CpmSequencePkg
+# -- Compiling package CpmTestPkg
+# -- Importing package CpmEnvPkg
+# -- Importing package CpmSequencePkg
+# -- Compiling package StressTestPkg
+# -- Importing package CpmTestPkg
+# -- Compiling package SmokeTestPkg
+# -- Compiling package DropTestPkg
+# -- Compiling module tb_top
+# -- Importing package SmokeTestPkg
+# -- Importing package StressTestPkg
+# 
+# Top level modules:
+# 	tb_top
+# End time: 02:20:24 on Jul 05,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# INFO: Compilation Completed!
+# vsim -coverage -voptargs="+acc" work.tb_top "+UVM_TESTNAME=SmokeTest" "+UVM_VERBOSITY=UVM_LOW" 
+# Start time: 02:20:24 on Jul 05,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2025.1_2 win64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.input_streaming_if(fast)
+# Loading work.output_streaming_if(fast)
+# Loading work.reg_ctrl_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.design_pkg_uvm(fast)
+# Loading work.cpm_verification_param_pkg(fast)
+# Loading work.MyTransactionsPkg(fast)
+# Loading work.CpmRegAgentPkg(fast)
+# Loading work.CpmOutAgentPkg(fast)
+# Loading work.CpmInAgentPkg(fast)
+# Loading work.CpmSequencePkg(fast)
+# Loading work.CpmEnvPkg(fast)
+# Loading work.CpmTestPkg(fast)
+# Loading work.StressTestPkg(fast)
+# Loading work.SmokeTestPkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.tb_top(fast)
+# Loading work.input_streaming_if(fast__2)
+# Loading work.output_streaming_if_sv_unit(fast)
+# Loading work.output_streaming_if(fast__2)
+# Loading work.reg_ctrl_if_sv_unit(fast)
+# Loading work.reg_ctrl_if(fast__2)
+# Loading work.cpm(fast)
+# ** Warning: (vsim-8441) Clocking block output m_vif.drv_cb.req is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /CpmRegAgentPkg::CpmRegDriver #(2000) File: verification/Cpm_Reg_Agent/CpmRegDriver.sv Line: 67
+# Loading C:/questasim64_2025.1_2/uvm-1.1d\win64\uvm_dpi.dll
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# CONFIG/wave.do
+# wave activecursor not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'CpmStressVirtualSequence' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'CpmSmokeVirtualSequence' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# [0] TB_TOP: starting run_test(CpmTest)
+# UVM_INFO @ 0: reporter [RNTST] Running test SmokeTest...
+# UVM_INFO verification/Tests/CpmBaseTest/CpmBaseTest.sv(27) @ 0: uvm_test_top [SmokeTest] inside Build Phase!
+# UVM_INFO verification/Environment/CpmEnv.sv(42) @ 0: uvm_test_top.m_env [CpmEnv] inside build phase...
+# UVM_INFO verification/Environment/CpmEnv.sv(55) @ 0: uvm_test_top.m_env [CpmEnv] Building input agent
+# UVM_INFO verification/Environment/CpmEnv.sv(58) @ 0: uvm_test_top.m_env [CpmEnv] Building output agent
+# UVM_INFO verification/Environment/CpmEnv.sv(61) @ 0: uvm_test_top.m_env [CpmEnv] Building register control agent
+# UVM_INFO verification/Environment/CpmEnv.sv(64) @ 0: uvm_test_top.m_env [CpmEnv] Building scoreboard
+# UVM_INFO verification/Cpm_In_Agent/CpmInAgent.sv(41) @ 0: uvm_test_top.m_env.m_in_agent [CpmInAgent] Starting to create m_seqr...
+# UVM_INFO verification/Cpm_In_Agent/CpmInAgent.sv(43) @ 0: uvm_test_top.m_env.m_in_agent [CpmInAgent] Finished creating m_seqr
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutAgent.sv(28) @ 0: uvm_test_top.m_env.m_out_agent [CpmInAgent] Starting to create m_seqr...
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(70) @ 0: uvm_test_top.m_env.m_out_agent.m_mon [CpmOutMonitor] inside build phase...
+# UVM_INFO verification/Cpm_Reg_Agent/CpmRegDriver.sv(20) @ 0: uvm_test_top.m_env.m_reg_agent.m_drv [CpmRegDriver] inside build phase...
+# UVM_INFO verification/Environment/CpmEnv.sv(85) @ 0: uvm_test_top.m_env [CpmEnv] inside connect phase...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------------
+# Name                       Type                              Size  Value
+# ------------------------------------------------------------------------
+# uvm_test_top               SmokeTest                         -     @486 
+#   m_env                    CpmEnv                            -     @496 
+#     m_cov_collector        CoverageCollector                 -     @657 
+#       analysis_export_in   uvm_analysis_imp_in               -     @664 
+#       analysis_export_out  uvm_analysis_imp_out              -     @672 
+#     m_in_agent             CpmInAgent                        -     @526 
+#       m_drv                CpmInDriver                       -     @689 
+#         rsp_port           uvm_analysis_port                 -     @704 
+#         seq_item_port      uvm_seq_item_pull_port            -     @696 
+#       m_mon                CpmInMonitor                      -     @821 
+#         ap                 uvm_analysis_port                 -     @828 
+#       m_seqr               CpmInSequencer                    -     @712 
+#         rsp_export         uvm_analysis_export               -     @719 
+#         seq_item_export    uvm_seq_item_pull_imp             -     @813 
+#         arbitration_queue  array                             0     -    
+#         lock_queue         array                             0     -    
+#         num_last_reqs      integral                          32    'd1  
+#         num_last_rsps      integral                          32    'd1  
+#     m_out_agent            CpmOutAgent                       -     @533 
+#       m_drv                CpmOutDriver                      -     @845 
+#         rsp_port           uvm_analysis_port                 -     @860 
+#         seq_item_port      uvm_seq_item_pull_port            -     @852 
+#       m_mon                CpmOutMonitor                     -     @977 
+#         ap                 uvm_analysis_port                 -     @985 
+#       m_seqr               CpmOutSequencer                   -     @868 
+#         rsp_export         uvm_analysis_export               -     @875 
+#         seq_item_export    uvm_seq_item_pull_imp             -     @969 
+#         arbitration_queue  array                             0     -    
+#         lock_queue         array                             0     -    
+#         num_last_reqs      integral                          32    'd1  
+#         num_last_rsps      integral                          32    'd1  
+#     m_ref_model            RefModel                          -     @570 
+#       in_ap                uvm_analysis_imp                  -     @577 
+#       out_ap               uvm_analysis_port                 -     @585 
+#     m_reg_agent            CpmRegAgent                       -     @540 
+#       m_drv                CpmRegDriver                      -     @1004
+#         rsp_port           uvm_analysis_port                 -     @1019
+#         seq_item_port      uvm_seq_item_pull_port            -     @1011
+#       m_mon                CpmRegMonitor                     -     @1136
+#         ap                 uvm_analysis_port                 -     @1144
+#       m_seqr               CpmRegSequencer                   -     @1027
+#         rsp_export         uvm_analysis_export               -     @1034
+#         seq_item_export    uvm_seq_item_pull_imp             -     @1128
+#         arbitration_queue  array                             0     -    
+#         lock_queue         array                             0     -    
+#         num_last_reqs      integral                          32    'd1  
+#         num_last_rsps      integral                          32    'd1  
+#     m_reg_predictor        uvm_reg_predictor #(CpmRegTrans)  -     @630 
+#       bus_in               uvm_analysis_imp                  -     @641 
+#       reg_ap               uvm_analysis_port                 -     @649 
+#     m_sb                   CpmScoreboard                     -     @547 
+#       m_actual_export      uvm_analysis_imp_actual           -     @562 
+#       m_expected_export    uvm_analysis_imp_expected         -     @554 
+# ------------------------------------------------------------------------
+# 
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(140) @ 0: reporter@@vseq [VSEQ] 
+# Starting Hard Reset
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(162) @ 95: reporter@@vseq [VSEQ] 
+# Enabling CPM (Hard Write)
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(165) @ 135: reporter@@vseq [VSEQ] Readback CTRL: 0x1
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(130) @ 155: reporter@@vseq [VSEQ] 
+# Starting PASS Sequence
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 195: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = b | opcode  = f | payload = 9bdf | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 225: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 5 | opcode  = 1 | payload = f284 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 255: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 4 | opcode  = 4 | payload = f803 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 285: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = f | opcode  = 5 | payload = c73 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 315: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 2 | opcode  = 4 | payload = f46f | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 345: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = c | opcode  = 3 | payload = 8cc5 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 375: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = e | opcode  = 9 | payload = 16c6 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 405: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = d | opcode  = f | payload = 81a6 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 435: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 0 | opcode  = c | payload = 40fd | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 465: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 7 | opcode  = d | payload = fd42 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(171) @ 485: reporter@@vseq [VSEQ] Starting PASS Sequence
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 535: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = c | opcode  = 9 | payload = 589f | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 575: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 3 | opcode  = c | payload = 83fb | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 615: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 4 | opcode  = 7 | payload = 9679 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 655: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 8 | opcode  = 9 | payload = be7b | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 695: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 4 | opcode  = d | payload = 7470 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 735: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 5 | opcode  = 0 | payload = 86f5 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 775: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = f | opcode  = 1 | payload = bc69 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 815: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 2 | opcode  = 5 | payload = 1ce4 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 855: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 6 | opcode  = 3 | payload = cd94 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 895: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 2 | opcode  = 1 | payload = 71ca | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(117) @ 915: reporter@@vseq [VSEQ] 
+# Starting XOE Sequenece
+# UVM_WARNING verilog_src/uvm-1.1d/src/reg/uvm_reg_field.svh(1800) @ 915: reporter [RegModel] Target bus does not support byte enabling, and the field 'm_regmodel.PARAMS.MASK' is not the only field within the entire bus width. Individual field access will not be available. Accessing complete register instead.
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 985: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 3 | opcode  = 9 | payload = 6e26 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1025: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = d | opcode  = f | payload = 6d09 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1065: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 8 | opcode  = c | payload = 706b | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1105: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 5 | opcode  = 8 | payload = 7334 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1145: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = c | opcode  = b | payload = 1f85 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1185: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 0 | opcode  = 0 | payload = de50 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1225: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 0 | opcode  = 7 | payload = fc9e | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1265: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = f | opcode  = f | payload = c6b6 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1305: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 0 | opcode  = 7 | payload = 1eb | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1345: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 0 | opcode  = 7 | payload = 65a1 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(104) @ 1365: reporter@@vseq [VSEQ] 
+# Starting ADD Sequenece
+# UVM_WARNING verilog_src/uvm-1.1d/src/reg/uvm_reg_field.svh(1800) @ 1365: reporter [RegModel] Target bus does not support byte enabling, and the field 'm_regmodel.PARAMS.ADD_CONST' is not the only field within the entire bus width. Individual field access will not be available. Accessing complete register instead.
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1445: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 8 | opcode  = 8 | payload = 7a48 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1495: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 1 | opcode  = 2 | payload = 3448 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1545: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 1 | opcode  = a | payload = f9a2 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1595: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 9 | opcode  = e | payload = f398 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1645: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = a | opcode  = 0 | payload = 3b68 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1695: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = c | opcode  = 2 | payload = 9112 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1745: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 1 | opcode  = b | payload = afc9 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1795: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 2 | opcode  = f | payload = e1b2 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1845: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 9 | opcode  = e | payload = 4014 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Cpm_Out_Agent/CpmOutMonitor.sv(104) @ 1895: uvm_test_top.m_env.m_out_agent.m_mon [MONITOR] Sampled Packet: 
+# ====================================================================================
+# CPM Packet: id = 0 | opcode  = a | payload = b0b8 | delay   = 0 | stalled = 0
+# ====================================================================================
+# 
+# 
+# UVM_INFO verification/Sequences/CpmVirtualSequence.sv(68) @ 1995: reporter@@vseq [VSEQ] DUT counters: COUNT_IN=40 COUNT_OUT=40 DROPPED_COUNT=0
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 2195: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO verification/Environment/CpmScoreboard.sv(73) @ 2195: uvm_test_top.m_env.m_sb [SCB_PASS] PASS exp_in=40 act_in=40 matched=40
+# UVM_INFO verification/Environment/CoverageCollector.sv(137) @ 2195: uvm_test_top.m_env.m_cov_collector [COV_FINAL] Final Coverage for m_cov_collector: 68.12%
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   65
+# UVM_WARNING :    4
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COV_FINAL]     1
+# [CpmEnv]     6
+# [CpmInAgent]     3
+# [CpmOutMonitor]     1
+# [CpmRegDriver]     1
+# [MONITOR]    40
+# [RNTST]     1
+# [RegModel]     2
+# [SCB_PASS]     1
+# [SmokeTest]     1
+# [TEST_DONE]     1
+# [TPRGED]     2
+# [UVMTOP]     1
+# [VSEQ]     8
+# ** Note: $finish    : C:/questasim64_2025.1_2/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 2195 ns  Iteration: 53  Instance: /tb_top
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2025.1_2/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at C:/questasim64_2025.1_2/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# invalid command name "clear"
+# invalid command name "qiot"
+# End time: 02:20:38 on Jul 05,2026, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 3

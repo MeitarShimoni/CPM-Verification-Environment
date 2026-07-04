@@ -33,7 +33,7 @@ echo "INFO: Compilation Completed!"
 # set wlf_file [format "vsim_%s.wlf" [clock format [clock seconds] -format "%Y%m%d_%H%M%S"]]
 # -wlf $wlf_file
 vsim -coverage -voptargs=+acc work.tb_top \
-  +UVM_TESTNAME=StressTest \
+  +UVM_TESTNAME=SmokeTest \
   +UVM_VERBOSITY=UVM_LOW
 
 
