@@ -1,58 +1,18 @@
-# do run_regression.do
-# INFO: Starting regression...
+# do run.do
+# INFO: Starting simulation script...
 # PWD = C:/Users/meita/OneDrive/Desktop/Chip_Design_Verification/Verification/CPM_Verification_Environment
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is meita@MEITARLOQ.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is meita@MEITARLOQ.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is meita@MEITARLOQ.
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is meita@MEITARLOQ.
-# ** Warning: (vlib-34) Library already exists at "work".
-# Errors: 0, Warnings: 1
-# QuestaSim-64 vmap 2025.1_2 Lib Mapping Utility 2025.04 Apr  7 2025
-# vmap work work 
-# Modifying modelsim.ini
-# QuestaSim-64 vlog 2025.1_2 Compiler 2025.04 Apr  7 2025
-# Start time: 01:04:09 on Jul 05,2026
-# vlog -sv verification/cpm_verification_param_pkg.sv design/cpm_rtl_update.sv verification/Interfaces/input_streaming_if.sv verification/Interfaces/output_streaming_if.sv verification/Interfaces/reg_ctrl_if.sv verification/Transactions/MyTransactionsPkg.sv verification/Cpm_In_Agent/CpmInAgentPkg.sv verification/Cpm_Out_Agent/CpmOutAgentPkg.sv verification/Cpm_Reg_Agent/CpmRegAgentPkg.sv verification/RAL/design_pkg_uvm.sv verification/Environment/CpmEnvPkg.sv verification/Sequences/CpmSequencePkg.sv verification/Tests/CpmTestPkg.sv verification/Tests/StressTest/StressTestPkg.sv verification/Tests/SmokeTest/SmokeTestPkg.sv verification/tb_top.sv 
-# -- Compiling package cpm_verification_param_pkg
-# -- Compiling module cpm
-# -- Compiling interface input_streaming_if
-# -- Importing package cpm_verification_param_pkg
-# -- Compiling package output_streaming_if_sv_unit
-# -- Compiling interface output_streaming_if
-# -- Compiling package reg_ctrl_if_sv_unit
-# -- Compiling interface reg_ctrl_if
-# -- Compiling package MyTransactionsPkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) verification/Transactions/MyTransactionsPkg.sv(3): Using implicit +incdir+C:/questasim64_2025.1_2/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Compiling package CpmInAgentPkg
-# -- Importing package MyTransactionsPkg
-# -- Compiling package CpmOutAgentPkg
-# -- Compiling package CpmRegAgentPkg
-# -- Compiling package design_pkg_uvm
-# -- Compiling package CpmEnvPkg
-# -- Importing package CpmInAgentPkg
-# -- Importing package CpmOutAgentPkg
-# -- Importing package CpmRegAgentPkg
-# -- Importing package design_pkg_uvm
-# -- Compiling package CpmSequencePkg
-# -- Compiling package CpmTestPkg
-# -- Importing package CpmEnvPkg
-# -- Importing package CpmSequencePkg
-# -- Compiling package StressTestPkg
-# -- Importing package CpmTestPkg
-# -- Compiling package SmokeTestPkg
-# -- Compiling module tb_top
-# -- Importing package SmokeTestPkg
-# -- Importing package StressTestPkg
-# ** Error: verification/tb_top.sv(26): (vlog-13006) Could not find the package (DropTestPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# End time: 01:04:10 on Jul 05,2026, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# ** Error: C:/questasim64_2025.1_2/win64/vlog failed.
-# Error in macro ./run_regression.do line 29
-# C:/questasim64_2025.1_2/win64/vlog failed.
+# ** Warning: (vdel-6) -- Waiting for lock by "meita@MEITARLOQ, pid = 9568
+# ". Lockfile is "C:/Users/meita/OneDrive/Desktop/Chip_Design_Verification/Verification/CPM_Verification_Environment/work/_lock".
+# SIGINT: interrupt
+# ** Error: C:/questasim64_2025.1_2/win64/vdel failed.
+# Error in macro ./run.do line 7
+# C:/questasim64_2025.1_2/win64/vdel failed.
 #     while executing
-# "vlog -sv \
-#   verification/cpm_verification_param_pkg.sv \
-#   design/cpm_rtl_update.sv \
-#   verification/Interfaces/input_streaming_if.sv \
-#   verificatio..."
+# "error [FixExecError $msg]"
+#     (procedure "vdel" line 6)
+#     invoked from within
+# "vdel -lib work -all"
+#     invoked from within
+# "if {[file exists work]} {
+#   vdel -lib work -all
+# }"
