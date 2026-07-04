@@ -1,0 +1,24 @@
+BEGIN 3:output_streaming_if:fast__2:work
+    out_ready :  1:tb_top:fast:work
+    out_opcode :  1:tb_top:fast:work
+    out_valid :  1:tb_top:fast:work
+    out_id :  1:tb_top:fast:work
+    out_payload :  1:tb_top:fast:work
+END 
+BEGIN 3:input_streaming_if:fast__2:work
+    in_payload :  1:tb_top:fast:work
+    rst :  1:tb_top:fast:work
+    in_ready :  1:tb_top:fast:work
+    in_opcode :  1:tb_top:fast:work
+    clk :  1:tb_top:fast:work
+    in_valid :  1:tb_top:fast:work
+    in_id :  1:tb_top:fast:work
+END 
+BEGIN 3:reg_ctrl_if:fast__2:work
+    gnt :  1:tb_top:fast:work
+    addr :  1:tb_top:fast:work
+    rdata :  1:tb_top:fast:work
+    req :  1:tb_top:fast:work
+    write_en :  1:tb_top:fast:work
+    wdata :  1:tb_top:fast:work
+END 
