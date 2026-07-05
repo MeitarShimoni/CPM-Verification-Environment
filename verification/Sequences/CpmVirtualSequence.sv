@@ -56,7 +56,7 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
 
     // ================================= TASKS ================================================
     
-    
+    int timeout_cycles = 1000;
     task check_invariants();
         uvm_status_e status;
         uvm_reg_data_t in_val, out_val, drop_val;
@@ -86,6 +86,101 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
         end
 
     endtask
+
+    // task write_read_traffic2(
+    //     input int num = 10, 
+    //     input bit in_forced_op = 0, 
+    //     input logic [3:0] in_forced_opcode = 0);
+
+    //     fork
+    //         begin
+    //             m_seq.use_forced_opcode = in_forced_op;
+    //             m_seq.forced_opcode = in_forced_opcode;
+    //             m_seq.num_packets = num;
+    //             m_seq.start(m_in_seqr, this);
+    //         end
+    //         begin
+    //             m_out_seq.num_packets = num;
+    //             m_out_seq.out_delay   = this.output_delay;
+    //             m_out_seq.start(m_out_seqr, this);
+    //         end
+    //         begin
+    //         repeat (timeout_cycles) begin
+    //             @(posedge m_in_seqr.m_vif.clk);
+    //         end
+
+    //         `uvm_warning("VSEQ_TIMEOUT", $sformatf(
+    //             "write_read_traffic2 timeout reached after %0d cycles. This may be expected in DROP packet tests.",
+    //             timeout_cycles
+    //         ))
+    //         end
+    //     join_any
+    //     disable fork;
+
+    // endtask
+
+    task write_read_traffic2(
+        input int num = 10, 
+        input bit in_forced_op = 0, 
+        input logic [3:0] in_forced_opcode = 0,
+        input int expected_out_packets = -1,
+        input int timeout_cycles = 500
+    );
+
+        int out_num;
+
+        if (expected_out_packets < 0)
+            out_num = num;
+        else
+            out_num = expected_out_packets;
+
+        fork
+            begin : input_thread
+                CpmSequence1 in_seq;
+
+                in_seq = CpmSequence1::type_id::create("in_seq");
+                in_seq.use_forced_opcode = in_forced_op;
+                in_seq.forced_opcode     = in_forced_opcode;
+                in_seq.num_packets       = num;
+                in_seq.start(m_in_seqr, this);
+            end
+
+            begin : output_with_timeout_thread
+                if (out_num > 0) begin
+                    fork
+                        begin : output_thread
+                            CpmOutSequence out_seq;
+
+                            out_seq = CpmOutSequence::type_id::create("out_seq");
+                            out_seq.num_packets = out_num;
+                            out_seq.out_delay   = this.output_delay;
+                            out_seq.start(m_out_seqr, this);
+                        end
+
+                        begin : timeout_thread
+                            repeat (timeout_cycles) begin
+                                @(posedge m_in_seqr.m_vif.clk);
+                            end
+
+                            `uvm_warning("VSEQ_TIMEOUT", $sformatf(
+                                "Output timeout reached after %0d cycles.",
+                                timeout_cycles
+                            ))
+                        end
+                    join_any
+
+                    disable fork;
+                end
+                else begin
+                    `uvm_info("VSEQ", "Skipping output sequence because expected_out_packets = 0", UVM_LOW)
+                end
+            end
+        join
+
+    endtask
+
+        
+
 
     task write_read_burst(input int num = 5);
 
@@ -177,16 +272,16 @@ class CpmVirtualSequence extends uvm_sequence#(uvm_sequence_item);
 
 
 
-    task drop_test(int num_trans = 10);
+    task drop_test(int num_trans = 10, int opcode_to_drop = 4);
         uvm_status_e   status;
         uvm_reg_data_t data;
 
         `uvm_info("VSEQ", "\nStarting Drop Sequence", UVM_LOW)
-        m_regmodel.DROP_CFG.DROP_OPCODE.set('h4);
+        m_regmodel.DROP_CFG.DROP_OPCODE.set(opcode_to_drop);
         m_regmodel.DROP_CFG.DROP_EN.set(1'b1);
         m_regmodel.DROP_CFG.update(status, .parent(this));
 
-        write_read_traffic(num_trans,1,'h4);
+        write_read_traffic(num_trans);
         
     endtask
 

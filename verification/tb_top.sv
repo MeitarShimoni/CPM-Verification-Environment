@@ -23,7 +23,7 @@ module tb_top;
   
   import SmokeTestPkg::*;  
   import StressTestPkg::*;  
-  // import DropTestPkg::*;  
+  import DropTestPkg::*;  
   // Add DropTestPkg here when ready
 
   // clock

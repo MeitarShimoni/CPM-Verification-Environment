@@ -12,25 +12,19 @@ class CpmDropVirtualSequence extends CpmVirtualSequence;
 
     hard_reset();
 
-    // Configure
-    m_regmodel.DROP_CFG.DROP_OPCODE.set(16'h0004);
-    m_regmodel.DROP_CFG.DROP_EN.set(1'b1);
-    m_regmodel.DROP_CFG.update(status, .parent(this));
-
-    write_read_traffic(30,1,'h4);
-
-    #30;
-    // Reconfigure:    
-
-    m_regmodel.DROP_CFG.DROP_OPCODE.set(16'h0000);
-    m_regmodel.DROP_CFG.DROP_EN.set(1'b1);
-    m_regmodel.DROP_CFG.update(status, .parent(this));
-
-    write_read_traffic(30,1,'h4);
+    enable_cpm(); // Enable and Read CPM
+    #20;
 
 
-
-
+    // for (int i = 0; i < 9; i++) begin
+    //     drop_test(10, i); 
+    //     #10;
+    // end
+    
+    drop_test(12, 4); 
+    #10;
+    drop_test(12, 9); 
+    
 
     endtask
 
