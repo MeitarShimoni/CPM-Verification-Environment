@@ -76,23 +76,26 @@ A **Top Virtual Sequence** coordinates traffic generation and dynamic configurat
 ### Test Scenarios
 
 1. **Smoke Test**  
+![Smoke Test](Documents/SmokeTestWave.png)
    - Reset validation  
    - RAL connectivity  
-   - Basic traffic across PASS, XOR, ADD, ROT modes  
+   - Basic traffic across PASS, XOR, ADD, ROT modes 
+   - The streaming drives set in Fork-Join for parallel reading and writing.
 
 2. **Stress Test**  
+![Stress Test](Documents/StressTestWave.png)
    - High-density randomized traffic  
    - Randomized backpressure  
    - Continuous invariant checking  
+   - The streaming drives set in Fork-Join for parallel reading and writing.
 
 3. **Drop Test**  
+![Drop Test](Documents/DropTestWave.png)
    - Configures DROP_EN and DROP_OPCODE  
    - Verifies correct packet suppression  
-   - Validates `DROPPED_COUNT` behavior  
-
-4. **Reconfig Test**  
-   - Dynamically changes processing mode during active traffic  
-   - Verifies configuration sampling at `in_fire`  
+   - Validates `DROPPED_COUNT` behavior
+   - Reading and writing behavior needs an update.  
+ 
 
 ---
 
